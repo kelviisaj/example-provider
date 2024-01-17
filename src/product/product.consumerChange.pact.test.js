@@ -31,7 +31,8 @@ describe('Pact Verification', () => {
       ...baseOpts,
       pactUrls: [process.env.PACT_URL],
       stateHandlers: stateHandlers,
-      requestFilter: requestFilter
+      requestFilter: requestFilter,
+      consumerVersionTags: ['kelvi']
     };
 
     return new Verifier(opts).verifyProvider().then(() => {
