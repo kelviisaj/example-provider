@@ -36,7 +36,8 @@ describe('Pact Verification', () => {
       // https://docs.pact.io/pact_broker/advanced_topics/pending_pacts
       enablePending: true,
       // https://docs.pact.io/pact_broker/advanced_topics/wip_pacts
-      includeWipPactsSince: '2020-01-01'
+      includeWipPactsSince: '2020-01-01',
+      providerVersionTags: 'tech-council'
     };
 
     const opts = {
