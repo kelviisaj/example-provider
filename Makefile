@@ -13,7 +13,7 @@ GIT_BRANCH?=$(shell git rev-parse --abbrev-ref HEAD)
 
 # Only deploy from master (to production env) or test (to test env)
 ifeq ($(GIT_BRANCH),master)
-	ENVIRONMENT=${ENVIRONMENT}
+	ENVIRONMENT=test
 	DEPLOY_TARGET=deploy
 else
 	ifeq ($(GIT_BRANCH),test)
